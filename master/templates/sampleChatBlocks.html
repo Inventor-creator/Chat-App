@@ -1,0 +1,33 @@
+{%extends "sampleChat.html" %}
+
+
+{%block chats%}
+    {% for message in messages%}
+        {%for user in users%}
+            {%if message.sentByUserId == user[0] %}
+                <!-- after the equivalence operator, current user should be there -->
+                {%if user[1] == "Nigga" %}
+                    <div class="cardSent">
+
+                        
+                        <p style="margin: 2px ; ">{{message.message}}</p>
+                        
+                    </div>
+                {%else%}
+                    <div class="cardRecieved">
+
+                        <p style="margin: 2px ; font-weight: bold;">{{user[1]}}:</p>
+                        
+                        <p style="margin: 2px ; ">{{message.message}}</p>
+                        
+                    </div>
+                    
+                {%endif%}
+                <br><br><br><br>
+            {%endif%}
+            
+        {%endfor%}
+        
+    {%endfor%}
+    
+{%endblock%}

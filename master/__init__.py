@@ -8,7 +8,7 @@ import os
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 
-filename = ""
+filename = "chats.db"
 var = "sqlite:///" + os.path.join(basedir, filename)
 
 app = Flask(__name__)

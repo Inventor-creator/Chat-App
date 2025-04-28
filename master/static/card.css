@@ -1,0 +1,24 @@
+.cardSent{
+
+    float: right;
+    display: block;
+
+    border-radius: 10px;
+    height:auto;
+    background-color: lightgreen;
+    color: black;
+    
+}
+
+.cardRecieved{
+
+    float: left;
+
+    display: block;
+
+    border-radius: 10px;
+    height:auto;
+    background-color: lightgreen;
+    color: black;
+    
+}
