@@ -30,6 +30,7 @@ class messages(db.Model):
     __tablename__ = 'messages'
     
     messageId = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    chatRoomId = db.Column(db.Integer , db.ForeignKey("chatRooms.chatRoomId"))
     sentByUserId = db.Column(db.Integer, db.ForeignKey('Users.userId'), nullable=False)
     message = db.Column(db.Text, nullable=False)
     repliedTo = db.Column(db.Integer, db.ForeignKey('messages.messageId'))

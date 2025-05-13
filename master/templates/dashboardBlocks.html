@@ -1,0 +1,19 @@
+{%extends "dashboard.html"%}
+
+{%block chats%}
+    <!-- chatroom is a tuple -->
+    <form method="post">
+        
+            {%for chatRoom in userChatRooms%}
+                <div style="display: flex; justify-content: center;"></div>
+                    <div class = "chats" style="max-width: 250px; font-size: 2em; border-radius: 10px; margin: 10px;">
+                        <a href="">{{chatRoom[0]}}</a>
+                        
+                    </div>
+                </div>
+                    
+            {%endfor%}
+        
+    </form>
+    
+{%endblock%} 
